@@ -12,15 +12,30 @@ class BookingController extends Controller
 {
     public function index(Request $request)
     {
-        // Check if user is admin
-        if ($request->user->role !== 'admins') {
+        // Admin can see all bookings
+        if ($request->user->role === 'admins') {
+            $bookings = Booking::with(['user:users_id,name,email', 'vehicle'])->get();
+        }
+        // Owner can see bookings for their vehicles
+        else if ($request->user->role === 'owners') {
+            $vehicleIds = Vehicle::where('users_id', $request->user->users_id)
+                            ->pluck('vehicles_id');
+            $bookings = Booking::whereIn('vehicles_id', $vehicleIds)
+                            ->with(['user:users_id,name,email', 'vehicle'])
+                            ->get();
+        }
+        // Renter can see their own bookings
+        else if ($request->user->role === 'renters') {
+            $bookings = Booking::where('users_id', $request->user->users_id)
+                            ->with(['vehicle'])
+                            ->get();
+        }
+        else {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Unauthorized. Admin access required.'
+                'message' => 'Unauthorized.'
             ], 403);
         }
-
-        $bookings = Booking::with(['user:users_id,name,email', 'vehicle'])->get();
         
         return response()->json([
             'status' => 'success',
