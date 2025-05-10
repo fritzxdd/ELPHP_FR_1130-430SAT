@@ -8,6 +8,8 @@
 
 Below are the visual documents for DriveGo:
 
+[DriveGo Docs](https://docs.google.com/document/d/11QAtv0YBtHRQyw_SPIA_hhmJt3c8QApmizqraZ6hO2g/edit?fbclid=IwZXh0bgNhZW0CMTEAAR6cGkaJC_T4k-CPUpTanuCUzh5IqyYxwp4gREa6AXr71gEo34ZaxCIogI3S1w_aem_UlQEOlZdhAvRns5WO8T12Q&tab=t.0)
+
 ![Page 01](docs/DriveGo%20Project%20Documents-01.png)
 ![Page 02](docs/DriveGo%20Project%20Documents-02.png)
 ![Page 03](docs/DriveGo%20Project%20Documents-03.png)
@@ -27,3 +29,12 @@ Below are the visual documents for DriveGo:
 ![Page 17](docs/DriveGo%20Project%20Documents-17.png)
 ![Page 18](docs/DriveGo%20Project%20Documents-18.png)
 ![Page 19](docs/DriveGo%20Project%20Documents-19.png)
+
+## Group Members
+
+**Team:**
+- [Sasing](https://github.com/fritzxdd/ELPHP_FR_1130-430SAT)
+- [Butas]()
+- [Janohan]()
+- [Bailon](https://github.com/PatrickBailon/ELPHP_PA1130-430SAT)
+- [Suficiencia](https://github.com/BrixSuficiencia/ELPHP_BR_1130-430SAT)
